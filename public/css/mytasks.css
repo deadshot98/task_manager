@@ -1,0 +1,23 @@
+.task-container {
+    
+    border-radius : 7px ;
+    background-image: linear-gradient(to right ,rgb(121, 226, 121) , rgb(197, 228, 197) );
+    margin : 10px 20px 10px 20px ;
+    opacity : 0.4 ;
+    padding : 10px ;
+    width: 700px; 
+    margin-left: 400px; 
+    color: red;
+    /* font-size: 50px; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+
+.task-container p {
+    color: black;
+    
+}
+
+.task-container span {
+    color : red ;
+    font-size: 15px;
+}

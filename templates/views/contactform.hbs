@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Us | Task Manager</title>
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/icon">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link href="/css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        {{>navbar}}
+    </header>
+	<div class="contact-form" style="padding-bottom:5px;">
+		<img alt="" class="avatar" src="https://i.postimg.cc/zDyt7KCv/a1.jpg">
+		<h2>Contact Us</h2>
+		<form action="/contactus" method="POST">
+			<p>Name</p><input name="username" placeholder="Enter Name" type="text">
+			<p>Message</p><textarea name="message"  id="" cols="49" rows="5" style="background: transparent;"></textarea>
+            <input type="submit" value="Submit">
+			{{!-- <p><input type="checkbox">Remember Me</p> --}}
+		</form>
+	</div>
+</body>
+</html>

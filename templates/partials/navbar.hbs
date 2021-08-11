@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://i.postimg.cc/dtc9fXY5/attachment-20319607-removebg-preview.png" alt="">
+    </div>
+    <ul class="nav-area">
+        <li><a href="/">Home</a></li>
+        {{#unless user}}
+            <li><a href="/users/register">Register</a></li>
+            <li><a href="/users/login">Login</a></li>
+        {{/unless}}
+        <li><a href="/users/createTask">Create Task</a></li>
+        {{#if user}}
+            <li><a href="/users/tasks">My Tasks</a></li>
+            <li><a href="/users/logout">Logout</a></li>
+        {{/if}}
+        <li><a href="/contactus">Contact</a></li>
+    </ul>
+</div>

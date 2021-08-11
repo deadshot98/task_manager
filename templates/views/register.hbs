@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Task Manager</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        {{>navbar}}
+    </header>
+
+    <div class="contact-form">
+        <img alt="" class="avatar" src="https://i.postimg.cc/zDyt7KCv/a1.jpg">
+        <h2>Register Form</h2>
+        {{#if success}}
+        <div class="successalert" style="margin-top: 80px; border-radius:14px;">
+            
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Success! </strong> {{success}}
+        </div>
+
+        {{/if}}
+        {{#if error}}
+        <div class="erroralert" style="margin-top: 0px; border-radius:14px;">
+            
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Error! </strong> {{error}}
+        </div>
+
+        {{/if}}
+        <form action="/users/register" method="POST">
+            <p>Name</p><input name="name" placeholder="Enter Name" type="text">
+            <p>Email</p><input name="email" placeholder="Enter Email" type="email">
+            {{!-- <p>Profile Picture</Picture>
+            </p><input placeholder="Upload Pic" type="file"> --}}
+
+            <p>Password</p><input name="password" placeholder="Enter Password" type="password">
+            <p>Confirm Password</p><input name="confirmpassword" placeholder="Confirm Password" type="password">
+
+            <input type="submit" value="Register" style="margin-top: -10px;">
+            {{!-- <p><input type="checkbox">Remember Me</p> --}}
+        </form>
+    </div>
+</body>
+
+</html>

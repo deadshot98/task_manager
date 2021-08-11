@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        {{>navbar}}
+        {{#if success}}
+        <div class="successalert" style="margin-top: 80px; border-radius:14px;">
+            
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Success! </strong> {{success}}
+        </div>
+
+        {{/if}}
+        {{#if error}}
+        <div class="erroralert" style="margin-top: 80px; border-radius:14px;">
+            
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Error! </strong> {{error}}
+        </div>
+
+        {{/if}}
+        <div class="welcome-text">
+            <h1>
+                WE MANAGE <span>TASKS</span></h1>
+            <a href="/contactus">Contact US</a>
+        </div>
+    </header>
+
+</body>
+
+</html>

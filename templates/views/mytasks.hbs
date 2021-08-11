@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks | Task Manager</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mytasks.css">
+</head>
+
+<body>
+    <header>
+        {{>navbar}}
+        {{#if success}}
+        <div class="successalert" style="margin-top: 80px; border-radius:14px;">
+
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Success! </strong> {{success}}
+        </div>
+
+
+
+        {{/if}}
+        {{#if error}}
+        <div class="erroralert" style="margin-top: 80px; border-radius:14px;">
+
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Error! </strong> {{error}}
+        </div>
+
+        {{/if}}
+    </header>
+
+    {{#each tasks}}
+        <div class="task-container">
+            <p><span>Title : </span> {{this.title}} </p>
+            <p><span>Description : </span> {{this.description}} </p>
+            <p><span>Days Left : </span> {{this.daysleft}} day(s) </p>
+        </div>
+        {{else}}
+        <div class="task-container" style="font-size : 50px;padding-left : 100px; margin-top:200px;">NO TASK CREATED YET
+        </div>
+        {{/each}}
+
+</body>
+
+</html>
